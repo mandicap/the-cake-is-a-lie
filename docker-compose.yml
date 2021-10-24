@@ -22,7 +22,7 @@ services:
       - 80:80
     volumes:
       - ./:/var/www
-      - ./docker-compose/nginx:/etc/nginx/conf.d/
+      - ./docker-compose/nginx:/etc/nginx/conf.d
     networks:
       - cake
 
