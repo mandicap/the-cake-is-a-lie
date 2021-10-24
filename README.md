@@ -1,53 +1,46 @@
-# CakePHP Application Skeleton
+# CakePHP CRUD
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
+A prospective employer currently uses CakePHP. This repo serves to show my ability to jump into and work with a PHP framework that isn't Laravel.
 
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 4.x.
+While there are CakePHP specific tools out there, this repo also showcases an ability to work with modern web tools, such as: Docker and Webpack; `Dockerfile`, `docker-compose.yml`, and `webpack.config.js` were written by myself.
 
-The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
+## Requirements
+
+- [Composer](https://getcomposer.org/download/)
+- [Docker](https://www.docker.com/) and Docker Compose
+- [Node](https://nodejs.org/en/) w/ NPM
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar create-project --prefer-dist cakephp/app [app_name]`.
+1. Clone this repository
 
-If Composer is installed globally, run
+    ```bash
+    git clone https://github.com/mandicap/the-cake-is-a-lie.git
+    ```
 
-```bash
-composer create-project --prefer-dist cakephp/app
-```
+2. Install Composer dependencies
 
-In case you want to use a custom app dir name (e.g. `/myapp/`):
+    ```bash
+    cd the-cake-is-a-lie
+    composer update
+    ```
 
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
+3. Install NPM dependencies
 
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
+    ```bash
+    yarn install
+    ```
 
-```bash
-bin/cake server -p 8765
-```
+4. Compile and bundle assets
 
-Then visit `http://localhost:8765` to see the welcome page.
+    ```bash
+    yarn dev
+    ```
 
-## Update
+5. Build Docker container
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+    ```bash
+    docker-compose up -d
+    ```
 
-## Configuration
-
-Read and edit the environment specific `config/app_local.php` and setup the 
-`'Datasources'` and any other configuration relevant for your application.
-Other environment agnostic settings can be changed in `config/app.php`.
-
-## Layout
-
-The app skeleton uses [Milligram](https://milligram.io/) (v1.3) minimalist CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+6. Visit app at `localhost`
