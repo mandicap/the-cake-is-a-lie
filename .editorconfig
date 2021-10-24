@@ -16,7 +16,7 @@ end_of_line = crlf
 [*.{css,js,yml}]
 indent_size = 2
 
-[*.twig]
+[*.{md,twig}]
 insert_final_newline = false
 
 [Makefile]
