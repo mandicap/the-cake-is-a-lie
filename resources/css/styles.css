@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html,
+  body { @apply h-full; }
+
+  body { @apply bg-gray-50; }
+
+  #app { @apply flex flex-col min-h-full; }
+
+  a {
+    @apply text-blue-400;
+    &:hover { @apply text-blue-500; }
+  }
+}
