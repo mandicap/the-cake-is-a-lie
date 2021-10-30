@@ -53,8 +53,8 @@ class AppController extends Controller
          */
         //$this->loadComponent('FormProtection');
 
-        // Check authentication result and lock site
         $this->loadComponent('Authentication.Authentication');
+        $this->loadComponent('Authorization.Authorization');
     }
 
     public function beforeFilter(EventInterface $event)

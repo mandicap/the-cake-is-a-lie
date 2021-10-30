@@ -23,6 +23,8 @@ class UsersController extends AppController
 
     public function login()
     {
+        $this->Authorization->skipAuthorization();
+
         $this->request->allowMethod(['get', 'post']);
 
         $result = $this->Authentication->getResult();
@@ -46,6 +48,8 @@ class UsersController extends AppController
 
     public function logout()
     {
+        $this->Authorization->skipAuthorization();
+
         $result = $this->Authentication->getResult();
 
         if ($result->isValid()) {
