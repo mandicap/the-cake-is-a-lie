@@ -63,6 +63,6 @@ class AppController extends Controller
 
         // For all controllers in the application, make index and view actions
         // public, skipping the authentication check
-        $this->Authentication->addUnauthenticatedActions(['index', 'view']);
+        // $this->Authentication->addUnauthenticatedActions(['index', 'view']);
     }
 }
