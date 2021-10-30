@@ -1,4 +1,4 @@
-<?= $this->Flash->render() ?>
+<?php $this->layout = 'auth' ?>
 
 <div class="sm:mx-auto sm:w-full sm:max-w-md">
     <div class="bg-white py-8 px-4 shadow sm:rounded-sm sm:px-10">
@@ -21,9 +21,5 @@
                 ]); ?>
             </div>
         <?= $this->Form->end() ?>
-
-        <p class="mt-8 text-center">
-            <?= $this->Html->link('Register for an account', ['action' => 'add']) ?>
-        </p>
     </div>
 </div>
