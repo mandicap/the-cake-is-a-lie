@@ -19,10 +19,14 @@
 </head><body>
 
     <div id="app">
-        <?= $this->Flash->render() ?>
-
         <main class="flex-grow flex flex-col justify-center min-h-full">
-            <?= $this->fetch('content') ?>
+            <div class="sm:mx-auto sm:w-full sm:max-w-md">
+                <?= $this->Flash->render() ?>
+
+                <div class="bg-white py-8 px-4 shadow sm:rounded-sm sm:px-10">
+                    <?= $this->fetch('content') ?>
+                </div>
+            </div>
         </main>
     </div>
 
