@@ -146,7 +146,12 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
 
             // Add authentication and authorization middleware
             ->add(new AuthenticationMiddleware($this))
-            ->add(new AuthorizationMiddleware($this))
+            ->add(new AuthorizationMiddleware($this, [
+                // By default the AuthorizationMiddleware will ensure that each
+                // request containing an identity also has authorization
+                // checked/bypassed. This disables that behavior.
+                'requireAuthorizationCheck' => false
+            ]))
 
             // Parse various types of encoded request bodies so that they are
             // available as array through $request->getData()
