@@ -19,12 +19,15 @@
 </head><body>
 
     <div id="app">
-        <header class="p-4">
-            Header
-        </header>
+        <div x-data="{ open: false }">
+            <?= $this->element('common/off-canvas') ?>
+            <?= $this->element('common/sidebar') ?>
+        </div>
 
-        <main class="flex-grow flex flex-col justify-center min-h-full">
-            <?= $this->fetch('content') ?>
+        <main class="flex-grow md:pl-64">
+            <div class="max-w-4xl mx-auto flex flex-col md:px-8 xl:px-0">
+                <?= $this->fetch('content') ?>
+            </div>
         </main>
 
         <footer class="p-4">
