@@ -5,14 +5,22 @@
 @layer base {
   html,
   body { @apply h-full; }
-  body { @apply bg-gray-50; }
+  body { @apply bg-gray-50 text-cake-black; }
 
-  #app { @apply flex flex-col min-h-full; }
+  #app {
+    @apply flex flex-col min-h-full;
+
+    & > header,
+    & > main,
+    & > footer {
+      @screen md { @apply pl-64; }
+    }
+  }
 
   a {
-    @apply text-blue-400;
+    @apply text-cake-red underline;
 
-    &:hover { @apply text-blue-500; }
+    &:hover { @apply text-cake-black no-underline; }
   }
 
   #off-canvas,
@@ -23,7 +31,6 @@
       @apply flex flex-col py-5 bg-white;
 
       & .logo { @apply flex-shrink-0 flex items-center justify-center px-4; }
-
       & nav { @apply px-2 space-y-1; }
     }
   }
@@ -32,10 +39,7 @@
     @apply flex inset-0 z-40;
 
     & .overlay { @apply fixed inset-0 bg-gray-600 bg-opacity-75; }
-
-    & .menu-wrapper {
-
-    }
+    & .menu-wrapper { @apply relative flex-1 max-w-xs w-full; }
 
     @screen md { @apply hidden; }
   }
