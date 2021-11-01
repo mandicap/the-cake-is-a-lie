@@ -4,7 +4,14 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        cake: {
+          red: '#d33c43',
+          black: '#404041'
+        }
+      }
+    },
   },
   variants: {
     extend: {},
