@@ -43,4 +43,11 @@ While there are CakePHP specific tools out there, this repo also showcases an ab
     docker-compose up -d
     ```
 
+6. Run migrations and seeds
+
+    ```bash
+    docker-compose exec php-fpm bin/cake migrations migrate
+    docker-compose exec php-fpm bin/cake migrations seed
+    ```
+
 6. Visit app at `localhost`
