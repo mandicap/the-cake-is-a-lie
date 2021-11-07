@@ -7,3 +7,5 @@ RUN apk add icu-dev
 RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl mysqli pdo_mysql
 RUN docker-php-ext-enable intl
+
+USER 1000:1000
