@@ -41,10 +41,8 @@
             </svg>
         </div>
 
-        <div class="flex-1 h-0 overflow-y-auto">
-            <nav class="px-2 space-y-1">
-
-            </nav>
+        <div class="flex-1 h-0 mt-5 overflow-y-auto">
+            <?= $this->element('common/nav-links') ?>
         </div>
     </div>
 

@@ -24,7 +24,7 @@
             <?= $this->element('common/sidebar') ?>
         </aside>
 
-        <header x-data class="flex flex-col flex-1">
+        <header x-data class="flex flex-col mb-12 md:pl-64">
             <div class="sticky top-0 z-10 flex-shrink-0 flex h-16 bg-white border-b border-gray-200">
                 <button type="button" @click="$dispatch('toggle-sidebar')" class="px-4 border-r border-gray-200 text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 md:hidden">
                     <span class="sr-only">Open sidebar</span>
@@ -35,14 +35,16 @@
             </div>
         </header>
 
-        <main class="flex-grow">
+        <main class="flex-grow md:pl-64">
             <div class="w-full mx-auto flex flex-col md:px-8">
                 <?= $this->fetch('content') ?>
             </div>
         </main>
 
-        <footer class="p-4">
-            Footer
+        <footer class="md:pl-64">
+            <div class="w-full mx-auto p-4">
+                Footer
+            </div>
         </footer>
     </div>
 
