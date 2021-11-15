@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: [
     './templates/**/*.php'
@@ -9,7 +11,8 @@ module.exports = {
         cake: {
           red: '#d33c43',
           black: '#404041'
-        }
+        },
+        yellow: colors.yellow
       }
     },
   },

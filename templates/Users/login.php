@@ -14,8 +14,6 @@
             'label' => ['class' => 'block text-sm font-medium text-gray-700']
         ]) ?>
 
-        <?= $this->Form->submit(__('Login'), [
-            'class' => 'w-full flex justify-center py-2 px-4 border border-transparent rounded-sm shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-        ]); ?>
+        <?= $this->Form->submit(__('Login'), ['class' => 'btn xl secondary w-full justify-center']); ?>
     </div>
 <?= $this->Form->end() ?>
