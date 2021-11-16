@@ -53,7 +53,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
     public function getAuthenticationService(ServerRequestInterface $request): AuthenticationServiceInterface
     {
         $authenticationService = new AuthenticationService([
-            'unauthenticatedRedirect' => Router::url('/users/login'),
+            'unauthenticatedRedirect' => Router::url('/auth/login'),
             'queryParam' => 'redirect',
         ]);
 
@@ -67,13 +67,15 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
 
         // Load the authenticators, you want session first
         $authenticationService->loadAuthenticator('Authentication.Session');
+
         // Configure form data check to pick email and password
         $authenticationService->loadAuthenticator('Authentication.Form', [
             'fields' => [
                 'username' => 'email',
                 'password' => 'password',
             ],
-            'loginUrl' => Router::url('/users/login'),
+
+            'loginUrl' => Router::url('/auth/login'),
         ]);
 
         return $authenticationService;

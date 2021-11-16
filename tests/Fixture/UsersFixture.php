@@ -26,6 +26,7 @@ class UsersFixture extends TestFixture
                 'modified' => '2021-10-25 08:25:34',
             ],
         ];
+
         parent::init();
     }
 }

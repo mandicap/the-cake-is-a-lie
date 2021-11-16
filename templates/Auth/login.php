@@ -1,4 +1,4 @@
-<?php $this->layout = 'auth' ?>
+<?php $this->assign('title', 'Login') ?>
 
 <?= $this->Form->create() ?>
     <div class="space-y-6">
