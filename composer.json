@@ -19,6 +19,7 @@
         "cakephp/debug_kit": "^4.4",
         "dereuromark/cakephp-ide-helper": "^1.16",
         "josegonzalez/dotenv": "^3.2",
+        "phpstan/phpstan": "^1.1",
         "phpunit/phpunit": "~8.5.0 || ^9.3",
         "psy/psysh": "@stable"
     },
@@ -48,7 +49,10 @@
         "cs-check": "phpcs --colors -p  src/ tests/",
         "cs-fix": "phpcbf --colors -p src/ tests/",
         "stan": "phpstan analyse",
-        "test": "phpunit --colors=always"
+        "test": "phpunit --colors=always",
+        "setup": "bin/cake code_completion generate",
+        "annotate": "bin/cake annotate all",
+        "illuminate": "bin/cake illuminator illuminate"
     },
     "prefer-stable": true,
     "config": {

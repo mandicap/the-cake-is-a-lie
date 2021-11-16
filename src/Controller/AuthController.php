@@ -18,6 +18,13 @@ class AuthController extends AppController
         $this->viewBuilder()->setLayout('auth');
     }
 
+    /**
+     * @return null|\Cake\Http\Response|void
+     *
+     * @throws \Exception
+     * @throws \Cake\Core\Exception\CakeException
+     * @throws \Cake\I18n\Exception\I18nException
+     */
     public function login()
     {
         $this->request->allowMethod(['get', 'post']);
@@ -44,6 +51,12 @@ class AuthController extends AppController
         }
     }
 
+    /**
+     * @return null|\Cake\Http\Response|void
+     *
+     * @throws \Exception
+     * @throws \Cake\Core\Exception\CakeException
+     */
     public function logout()
     {
         $result = $this->Authentication->getResult();
