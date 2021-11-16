@@ -57,4 +57,11 @@ class User extends Entity
             return (new DefaultPasswordHasher())->hash($password);
         }
     }
+
+	public const FIELD_ID = 'id';
+	public const FIELD_EMAIL = 'email';
+	public const FIELD_PASSWORD = 'password';
+	public const FIELD_CREATED = 'created';
+	public const FIELD_MODIFIED = 'modified';
+	public const FIELD_POSTS = 'posts';
 }

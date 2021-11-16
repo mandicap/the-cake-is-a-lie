@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ */
+?>
 <div id="sidebar">
     <div class="menu-wrapper">
         <div class="logo">

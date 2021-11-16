@@ -4,6 +4,8 @@
  * @var \App\Model\Entity\User $user
  */
 ?>
+<?php $this->assign('title', 'Add New User') ?>
+
 <div class="row">
     <aside class="column">
         <div class="side-nav">

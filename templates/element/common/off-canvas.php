@@ -1,3 +1,8 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ */
+?>
 <div x-show="open" @toggle-sidebar.window="open = !open" id="off-canvas">
     <div
         x-show="open"

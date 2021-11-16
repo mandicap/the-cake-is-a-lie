@@ -1,3 +1,9 @@
+<?php
+/**
+ * @var \App\View\AppView $this
+ * @var mixed $message
+ */
+?>
 <div x-data class="relative mb-8 p-4 w-full bg-red-500 text-white">
     <p><?= h($message) ?></p>
 

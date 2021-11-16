@@ -1,4 +1,10 @@
-<?php $this->assign('title', 'Login') ?>
+<?php
+/**
+ * @var \App\View\AppView $this
+ */
+
+$this->assign('title', 'Login')
+?>
 
 <?= $this->Form->create() ?>
     <div class="space-y-6">

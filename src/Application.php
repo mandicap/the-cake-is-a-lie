@@ -118,6 +118,7 @@ class Application extends BaseApplication implements AuthenticationServiceProvid
         // Load more plugins here
         $this->addPlugin('Migrations');
         $this->addPlugin('Authorization');
+        $this->addPlugin('IdeHelper');
     }
 
     /**
