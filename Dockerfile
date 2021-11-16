@@ -8,4 +8,6 @@ RUN docker-php-ext-configure intl
 RUN docker-php-ext-install intl mysqli pdo_mysql
 RUN docker-php-ext-enable intl
 
+COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+
 USER 1000:1000
