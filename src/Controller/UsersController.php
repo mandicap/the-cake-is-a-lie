@@ -17,46 +17,6 @@ class UsersController extends AppController
     public function beforeFilter(EventInterface $event)
     {
         parent::beforeFilter($event);
-
-        $this->Authentication->addUnauthenticatedActions(['login']);
-    }
-
-    public function login()
-    {
-        $this->Authorization->skipAuthorization();
-
-        $this->request->allowMethod(['get', 'post']);
-
-        $result = $this->Authentication->getResult();
-
-        // Regardless of POST or GET, redirect if user is logged in
-        if ($result->isValid()) {
-            // Redirect to /posts after login success
-            $redirect = $this->request->getQuery('redirect', [
-                'controller' => 'Posts',
-                'action' => 'index',
-            ]);
-
-            return $this->redirect($redirect);
-        }
-
-        // Display error if authentication failed
-        if ($this->request->is('post') && !$result->isValid()) {
-            $this->Flash->error(__('Invalid username or password'));
-        }
-    }
-
-    public function logout()
-    {
-        $this->Authorization->skipAuthorization();
-
-        $result = $this->Authentication->getResult();
-
-        if ($result->isValid()) {
-            $this->Authentication->logout();
-
-            return $this->redirect(['controller' => 'Users', 'action' => 'login']);
-        }
     }
 
     /**
