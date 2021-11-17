@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 /**
@@ -35,7 +36,20 @@ class AppView extends View
      *
      * @return void
      */
-    public function initialize(): void
+    public function initialize() : void
     {
+        $this->loadHelper('Authentication.Identity');
+
+        /**
+         * This is so ugly and way more complicated than it needs to be.
+         * See: comment in templates/layout/default.php where the breadcrumbs
+         * are rendered.
+         */
+        $this->Breadcrumbs->setTemplates([
+            'wrapper' =>'<nav{{attrs}}><ol>{{content}}</ol></nav>',
+            'item' =>'<li{{attrs}}><a href="{{url}}"{{innerAttrs}}>{{title}}</a>{{separator}}</li>',
+            'itemWithoutLink' =>'<li{{attrs}}><span{{innerAttrs}}>{{title}}</span>{{separator}}</li>',
+            'separator' => '{{separator}}'
+        ]);
     }
 }

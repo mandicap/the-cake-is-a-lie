@@ -2,6 +2,8 @@
 /**
  * @var \App\View\AppView $this
  */
+
+ $this->Breadcrumbs->prepend('Dashboard', '/');
 ?>
 <!DOCTYPE html>
 <html lang="en"><head>
@@ -37,6 +39,11 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
                 </button>
+
+                <div class="flex-1 px-4 flex justify-between">
+                    <?= $this->element('common/breadcrumbs') ?>
+                    <?= $this->element('common/user-menu') ?>
+                </div>
             </div>
         </header>
 

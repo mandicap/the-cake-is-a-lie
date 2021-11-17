@@ -3,8 +3,20 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\User $user
  */
+
+$this->assign('title', 'Add New User');
+
+$this->Breadcrumbs->add([
+    [
+        'title' => 'Users',
+        'url' => [
+            'controller' => 'users',
+            'action' => 'index'
+        ]
+    ],
+    ['title' => 'Add User']
+]);
 ?>
-<?php $this->assign('title', 'Add New User') ?>
 
 <div class="row">
     <aside class="column">

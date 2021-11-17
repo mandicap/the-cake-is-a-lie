@@ -84,4 +84,19 @@
       &:focus { @apply ring-yellow-400; }
     }
   }
+
+  .breadcrumbs {
+    @apply flex font-medium text-gray-400 text-xs;
+
+    & ol {
+      @apply flex items-center space-x-4;
+
+      & li {
+        @apply inline-flex items-center;
+
+        & a { @apply text-gray-500 no-underline; }
+        & a:hover { @apply text-gray-700; }
+      }
+    }
+  }
 }

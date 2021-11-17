@@ -3,7 +3,7 @@
  * @var \App\View\AppView $this
  */
 
-$this->assign('title', 'Login')
+$this->assign('title', 'Login');
 ?>
 
 <?= $this->Form->create() ?>
